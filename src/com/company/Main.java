@@ -16,10 +16,12 @@ public class Main {
         do {
             total = total + array1[y];
             y++;
-        }while(y == array1.length);
+            System.out.println("y is "+y);
+            System.out.println("total is "+total);
+        }while(y != array1.length);
         System.out.println(array1.length);
-        System.out.println(y);
-        System.out.println(total);
+  //      System.out.println(y);
+//        System.out.println(total);
 
         /*for(int x = 0; x<array1.length;x++){
 
