@@ -1,5 +1,7 @@
 package com.company;
 
+//import sun.jvm.hotspot.utilities.IntArray;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -69,10 +71,27 @@ public class Main {
             for (int j=0; j<4; j++){
                 System.out.printf("%-5d",c[i][j]);
             }
+            System.out.print("\n");
         }
 
 
+        System.out.print("array1 最大值 ： "+Array_MAX(array1)+"\n");
+        System.out.print("array1 最大值 ： "+Array_MAX(new int[] {22,12,56,77,7,1,2,5,0,22})+"\n"); //匿名数组
+    }
+
+    public static int Array_MAX(int IntArrayMax[]){
+        int IntArray[] = IntArrayMax;
+        int y = IntArray.length; //y为数组大小
 
 
+        int n = 0;  //用于遍历数组
+        int m = 0;  //用于寄存数组中最大的值
+
+        for(int i=0; i<y ; i++){
+            if(m<IntArray[i]){
+                m = IntArray[i];
+            }
+        }
+        return m;
     }
 }
